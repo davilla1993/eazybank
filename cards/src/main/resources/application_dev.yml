@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: "dev"
+
+build:
+  version: "2.0"
+
+accounts:
+  message: "Welcome to EazyBank Cards related Dev APIs"
+  contactDetails:
+    name: "Carlo GBOSSOU - Software Engineer"
+    email: "carlo.gbossou@eazybank.com"
+    onCallSupport:
+      - (+228) 99534874
+      - (+228) 97076132
