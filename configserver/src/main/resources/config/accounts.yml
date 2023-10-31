@@ -1,0 +1,11 @@
+build:
+  version: "1.0"
+
+accounts:
+  message: "Welcome to EazyBank Accounts related local APIs"
+  contactDetails:
+    name: "Folly GBOSSOU"
+    email: "folly@eazybank.com"
+    onCallSupport:
+      - (+228) 91554874
+      - (+228) 99046133
