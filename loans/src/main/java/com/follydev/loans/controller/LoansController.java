@@ -14,7 +14,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
@@ -33,21 +32,23 @@ import org.springframework.web.bind.annotation.*;
         description = "CRUD REST APIs in EazyBank to CREATE, UPDATE, FETCH AND DELETE loan details"
 )
 @RestController
-@RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
-@AllArgsConstructor
+@RequestMapping(path = "/api/loans", produces = {MediaType.APPLICATION_JSON_VALUE})
 @Validated
 public class LoansController {
 
-    private ILoansService iLoansService;
+    private final ILoansService iLoansService;
 
     @Value("${build.version}")
     private String buildVersion;
 
-    @Autowired
     private LoansContactInfoDto loansContactInfoDto;
 
     @Autowired
     private Environment environment;
+
+    public LoansController(ILoansService iLoansService) {
+        this.iLoansService = iLoansService;
+    }
 
     @Operation(
             summary = "Create Loan REST API",

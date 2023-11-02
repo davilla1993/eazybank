@@ -2,13 +2,24 @@ spring:
   application:
     name: "configserver"
   profiles:
-    active:
-      - native
+    active: native
+    #active: git
   cloud:
     config:
       server:
         native:
           search-locations: "classpath:/config"
+          #search-locations: "/Users/follysitoucarlogbossou/Documents/Eazybank-config-server-files"
+
+#        git:
+#          uri: "https://github.com/davilla1993/eazybank/eazybank-config.git"
+#          default-label: master
+#          timeout: 5
+#          clone-on-start: true
+#          force-pull: true
+
+encrypt:
+  key: "wMRUkEKT7X291k4I26T0xkeynU9wsL57HKSIkp25Ik8BzwRju4tqDwxnVd2vDOZ/OIaW6eNWpA8KQTVw+U4B+w=="
 
 server:
     port: 8071
