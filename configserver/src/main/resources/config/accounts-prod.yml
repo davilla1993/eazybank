@@ -5,7 +5,7 @@ accounts:
   message: "Welcome to EazyBank Accounts related prod APIs"
   contactDetails:
     name: "Rachel ABISSY - Product Owner"
-    email: "rachel.abissy@eazybank.com"
+    email: "{cipher}35a350f7be7557a51e67b5251e786cc051250b319283aa53079a3db859e9b585ba93d432256357b5b5a7d7985d76213a"
     onCallSupport:
       - (+228) 99534874
       - (+228) 97076132
